@@ -42,7 +42,7 @@ char *itoa_simple(char *dest, int i) {
 }
 
 void init(void) {
-	CPU_PRESCALE(0);
+	CPU_PRESCALE(0); // I don't know what it makes
 	usb_init();
 
 	/* Make PORTB5 (Arduino digital 13) an output by setting bit in DDR. */

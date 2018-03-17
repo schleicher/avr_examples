@@ -14,14 +14,14 @@ void usb_serial_flush_input(void);	// discard any buffered input
 
 // transmitting data
 int8_t usb_serial_putchar(uint8_t c);	// transmit a character
-int8_t usb_serial_putchar_nowait(uint8_t c);  // transmit a character, do not wait
+int8_t usb_serial_putchar_nowait(uint8_t c); // transmit a character, do not wait
 int8_t usb_serial_write(const uint8_t *buffer, uint16_t size); // transmit a buffer
 void usb_serial_flush_output(void);	// immediately transmit any buffered output
 
 // serial parameters
 uint32_t usb_serial_get_baud(void);	// get the baud rate
 uint8_t usb_serial_get_stopbits(void);	// get the number of stop bits
-uint8_t usb_serial_get_paritytype(void);// get the parity type
+uint8_t usb_serial_get_paritytype(void);	// get the parity type
 uint8_t usb_serial_get_numbits(void);	// get the number of data bits
 uint8_t usb_serial_get_control(void);	// get the RTS and DTR signal state
 int8_t usb_serial_set_control(uint8_t signals); // set DSR, DCD, RI, etc
@@ -50,8 +50,6 @@ int8_t usb_serial_set_control(uint8_t signals); // set DSR, DCD, RI, etc
 // has calls to these functions.
 #define usb_debug_putchar(c)
 #define usb_debug_flush_output()
-
-
 
 // Everything below this point is only intended for usb_serial.c
 #ifdef USB_SERIAL_PRIVATE_INCLUDE
