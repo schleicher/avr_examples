@@ -21,7 +21,7 @@ int main(void) {
 		} else if (t >= 27) {
 			// high temp
 			PORTB |= _BV(PB2); // red led on
-			PORTB &= ~_BV(PB1); // red led off
+			PORTB &= ~_BV(PB1); // blue led off
 		} else {
 			// normal temp - both leds off
 			PORTB &= ~_BV(PB1);
